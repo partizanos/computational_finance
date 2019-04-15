@@ -4,16 +4,10 @@ import cvxopt as opt
 from cvxopt import blas, solvers
 import pandas as pd
 
-
-def libsConfig():
-        np.random.seed(123)
-        # Turn off progress printing
-        solvers.options['show_progress'] = False
+np.random.seed(123)
+solvers.options['show_progress'] = False
 
 def getReturns():
-        ''' closing prices of
-         "Macdonald", "BankofAmerica", "IBM", "Chevron", "CocaCola", "Novartis", "ATT"
-         #over a one-year time span extending from 2013-05-01 to 2014-05-01.'''
         stocks = pd.read_csv("closes.dat", sep="\t")
         stocks.columns = ["Macdonald", "BankofAmerica", "IBM", "Chevron", "CocaCola", "Novartis", "ATT"]
         # ret = np.log((stocks)/stocks.shift(1))
@@ -21,106 +15,100 @@ def getReturns():
         ret.drop([0], axis=0, inplace=True)
         return ret
 
-def drawReturns(return_vec):
-        plt.plot(return_vec.T, alpha=.4);
-        plt.xlabel('time')
-        plt.ylabel('returns')
-        plt.show()
-
 def rand_weights(n):
     ''' Produces n random weights that sum to 1 '''
     k = np.random.rand(n)
     return k / sum(k)
 
+def getMuStd(returns, w):
+        p = np.asmatrix(np.mean(returns, axis=1))
+        C = np.asmatrix(np.cov(returns))
+
+        mu = w * p.T
+        sigma = np.sqrt(w * C * w.T)
+        return mu, sigma
 
 def random_portfolio(returns):
         '''
         Returns the mean and standard deviation of returns for a random portfolio
         '''
-
-        p = np.asmatrix(np.mean(returns, axis=1))
         w = np.asmatrix(rand_weights(returns.shape[0]))
-        C = np.asmatrix(np.cov(returns))
-
-        mu = w * p.T
-        sigma = np.sqrt(w * C * w.T)
-
-        # This recursion reduces outliers to keep plots pretty
-        if sigma > 2:
-                return random_portfolio(returns)
-        return mu, sigma
-
-def drawMeanStd(stds, means):
-        plt.plot(stds, means, 'o', markersize=5)
-        plt.xlabel('std')
-        plt.ylabel('mean')
-        plt.title('Mean and standard deviation of returns of randomly generated portfolios')
-        plt.show()
-
-
-libsConfig()
+        return getMuStd(returns, w)
 
 ret = getReturns()
 ret = ret.as_matrix()
 returns = ret.T
 
-n_assets = 7
-
-## NUMBER OF OBSERVATIONS
-n_obs = 251
-
-# returns = np.random.randn(n_assets, n_obs)
-drawReturns(returns)
-
-n_portfolios = 500
+n_portfolios = 10000
 portfolios = [
     random_portfolio(returns)
     for _ in range(n_portfolios)
 ]
 
-(
-        means,
-        stds
-)= np.column_stack(portfolios)
-
-drawMeanStd(stds, means)
+(means, stds)= np.column_stack(portfolios)
 
 
-def optimal_portfolio(returns):
+def analytical_calculation(returns):
         n = len(returns)
         returns = np.asmatrix(returns)
-
         N = 100
         mus = [10 ** (5.0 * t / N - 1.0) for t in range(N)]
-
-        # Convert to cvxopt matrices
-        S = opt.matrix(np.cov(returns))
+        cov_matrix = opt.matrix(np.cov(returns))
         pbar = opt.matrix(np.mean(returns, axis=1))
 
-        # Create constraint matrices
-        G = -opt.matrix(np.eye(n))  # negative n x n identity matrix
+        # constraint matrices
+        G = -opt.matrix(np.eye(n))
         h = opt.matrix(0.0, (n, 1))
         A = opt.matrix(1.0, (1, n))
         b = opt.matrix(1.0)
 
         # Calculate efficient frontier weights using quadratic programming
-        portfolios = [solvers.qp(mu * S, -pbar, G, h, A, b)['x']
-                      for mu in mus]
-        ## CALCULATE RISKS AND RETURNS FOR FRONTIER
+        portfolios = [solvers.qp(mu * cov_matrix, -pbar, G, h, A, b)['x'] for mu in mus]
         returns = [blas.dot(pbar, x) for x in portfolios]
-        risks = [np.sqrt(blas.dot(x, S * x)) for x in portfolios]
-        ## CALCULATE THE 2ND DEGREE POLYNOMIAL OF THE FRONTIER CURVE
-        m1 = np.polyfit(returns, risks, 2)
-        x1 = np.sqrt(m1[2] / m1[0])
-        # CALCULATE THE OPTIMAL PORTFOLIO
-        wt = solvers.qp(opt.matrix(x1 * S), -pbar, G, h, A, b)['x']
-        return np.asarray(wt), returns, risks
+        risks = [np.sqrt(blas.dot(x, cov_matrix * x)) for x in portfolios]
+        return returns, risks
 
+eff_returns, risks = analytical_calculation(returns)
 
-weights, returns, risks = optimal_portfolio(returns)
+min_risk = risks[-1]
+ret_min_risk = eff_returns[-1]
+
 
 plt.plot(stds, means, 'o')
-plt.ylabel('mean')
-plt.xlabel('std')
-plt.plot(risks, returns, 'y-o')
+plt.scatter(x=min_risk, y=ret_min_risk, c='red', marker='D', s=200)
+plt.ylabel('return')
+plt.xlabel('risk')
+plt.plot(risks, eff_returns, 'y-o')
 plt.show()
+
+
+##### Monte carlo simulation
+num_portfolios = 10000
+all_weights = np.zeros((num_portfolios, 7))
+ret_arr = np.zeros(num_portfolios)
+vol_arr = np.zeros(num_portfolios)
+sharpe_arr = np.zeros(num_portfolios)
+log_ret = getReturns()
+
+for x in range(num_portfolios):
+        # Weights
+        weights = np.array(np.random.random(7))
+        weights = weights / np.sum(weights)
+        # Save weights
+        all_weights[x, :] = weights
+        # Expected return
+        ret_arr[x] = np.sum((log_ret.mean() * weights * 251))
+
+        # Expected volatility
+        vol_arr[x] = np.sqrt(np.dot(weights.T, np.dot(log_ret.cov() * 251, weights)))
+
+
+plt.figure(figsize=(12, 8))
+plt.plot(vol_arr, ret_arr, "o")
+plt.xlabel('Volatility')
+plt.ylabel('Return')
+plt.show()
+# Using the efficient frontier, find the weight of the portfolio with the minimal volatility.
+# What can you say about the return of this portfolio?
+# It has the minimum risk and minimum return from the optimal ones.
+
