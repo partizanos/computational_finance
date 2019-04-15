@@ -82,32 +82,6 @@ plt.plot(risks, eff_returns, 'y-o')
 plt.show()
 
 
-##### Monte carlo simulation
-num_portfolios = 10000
-all_weights = np.zeros((num_portfolios, 7))
-ret_arr = np.zeros(num_portfolios)
-vol_arr = np.zeros(num_portfolios)
-sharpe_arr = np.zeros(num_portfolios)
-log_ret = getReturns()
-
-for x in range(num_portfolios):
-        # Weights
-        weights = np.array(np.random.random(7))
-        weights = weights / np.sum(weights)
-        # Save weights
-        all_weights[x, :] = weights
-        # Expected return
-        ret_arr[x] = np.sum((log_ret.mean() * weights * 251))
-
-        # Expected volatility
-        vol_arr[x] = np.sqrt(np.dot(weights.T, np.dot(log_ret.cov() * 251, weights)))
-
-
-plt.figure(figsize=(12, 8))
-plt.plot(vol_arr, ret_arr, "o")
-plt.xlabel('Volatility')
-plt.ylabel('Return')
-plt.show()
 # Using the efficient frontier, find the weight of the portfolio with the minimal volatility.
 # What can you say about the return of this portfolio?
 # It has the minimum risk and minimum return from the optimal ones.
