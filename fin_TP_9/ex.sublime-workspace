@@ -1,0 +1,796 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"vol",
+				"volatility_sigma"
+			],
+			[
+				"reas",
+				"reasonable_aproximatation_volatility"
+			],
+			[
+				"poss",
+				"possible_strategies"
+			],
+			[
+				"cho",
+				"chosen_strategy"
+			],
+			[
+				"h",
+				"history"
+			],
+			[
+				"sim",
+				"simulations"
+			],
+			[
+				"pos",
+				"possible_history"
+			],
+			[
+				"a",
+				"append"
+			],
+			[
+				"s",
+				"strategies"
+			],
+			[
+				"stra",
+				"strategies"
+			],
+			[
+				"strate",
+				"strategies"
+			],
+			[
+				"read",
+				"readImage\tfunction"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "ex.py",
+			"settings":
+			{
+				"buffer_size": 487,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "algo.py",
+			"settings":
+			{
+				"buffer_size": 1525,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "from algo import Black_Scholes_Algo\nimport numpy as np; import scipy.stats\n# call_premium = 0 \nC = 0 \n# current stock price \nS0 = 100; S = S0\n# initial time\nt0 = 0\n# time until option experiance,\ncall_maturiy_T = 1;t = call_maturiy_T\n#steady; risk-free-rate\nr=0.05\n# K = Options striking pruce\nK = 120\n# call_strike_price = 120\nK = 120\n# cumulative standard normal distribution\nN = scipy.stats.norm\n# \nvolatility_sigma = 0.2; s = volatility_sigma\t\nimport math\nln = math.log\ne = np.exp\nprint(t)\nprint(math.sqrt(t))\nprint(s * math.sqrt(t))\nprint(np.log(S / K) + (r + (s ** 2) / 2) * t)\nprint()\n# Black_Scholes_Algo(\n# \t\t# C = Call premium\n# \t\tC,\n# \t\t# S = Current stock price\n# \t\tS,\n# \t\t# t = time until option experiance,\n# \t\tt,\n# \t\t# K = Options striking pruce\n# \t\tK,\n# \t\t# r = Risk-free interest rate\n# \t\tr,\n# \t\t# N = cumulative standard normal distribution\n# \t\tN,\n# \t\t# e = Exponential term\n# \t\te,\n# \t\t# s = St. Deviation\n# \t\ts,\n# \t\t# ln = natural log\n# \t\tln\n# )\n\n#1.1\n# '''\n# The Black-Scholes formula (also called  Black-Scholes-Merton) \n# was the first widely used model for option pricing. \n# It's used to calculate the theoretical value of European-style options \n# using current stock prices, expected dividends, the option's strike price, \n# expected interest rates, time to expiration and expected volatility. \n# '''\n# import math\n\n# \t# underlying_price,\n# \t# option_strike_price,\n# \t# time_expiration_expressed_percent_year,\n# \t# implied_volatility,\n# \t# risk-free_interest_rates\n# d1, d2, C = Black_Scholes_Algo\n# print(d1, d2, C)\n# #1.2\n\n# def determine_value_call_t()\n# \treturn\n# # binomial tree to determine the call option value.\n# def determine_value_binomial_call_t(binomial_tree_depth)\n# \treturn\n\n# call_estimated_value  = determine_value_call_t(t0)\n# #1.3\n# # Plot the evolution of the estimated value of the call option as a function of the\n# # binomial tree depth.\n# import maplot.pyplot as plt\n\n# min_tree_depth = 1\n# max_tree_depth = 3 \n# binomial_tree_depth = [ x in range(min_tree_depth,max_tree_depth)]\n\n# plt.plot(call_estimated_value, binomial_tree_depth)\n\n# # 1.4 \n# # How deep should be the tree in order to get a reasonable approximation?\n\n# def reasonable_aproximatation_volatility():\n# \treturn \"\"\n# reasonable_aproximatation = reasonable_aproximatation_volatility()\t",
+			"settings":
+			{
+				"buffer_size": 2300,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "import numpy as np\nimport scipy.stats as si\nimport sympy as sy\nimport sympy.statistics as systats\n\ndef euro_vanilla_call(S, K, T, r, sigma):\n    \n    #S: spot price\n    #K: strike price\n    #T: time to maturity\n    #r: interest rate\n    #sigma: volatility of underlying asset\n    \n    d1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))\n    d2 = (np.log(S / K) + (r - 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))\n    \n    call = (S * si.norm.cdf(d1, 0.0, 1.0) - K * np.exp(-r * T) * si.norm.cdf(d2, 0.0, 1.0))\n    \n    return call",
+			"settings":
+			{
+				"buffer_size": 552,
+				"line_ending": "Unix",
+				"name": "import numpy as np"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 32.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"Sideba",
+				"View: Toggle Side Bar"
+			],
+			[
+				"Upgrate",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"List",
+				"Package Control: List Packages"
+			],
+			[
+				"sublimeLinter",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"ipnb",
+				"Set Syntax: IPython Notebook"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"sideB",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"sett",
+				"Set Syntax: BibLaTeX"
+			],
+			[
+				"select All",
+				"Bookmarks: Select All"
+			],
+			[
+				"select",
+				"Bookmarks: Select All"
+			],
+			[
+				"j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"latexTools",
+				"LaTeXTools: Check system"
+			],
+			[
+				"latextools",
+				"LaTeXTools: Check system"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 568.0,
+		"history":
+		[
+			"import socket; socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect('/home/dimitris/.local/share/anaconda/run/anaconda-2/anaconda.sock')",
+			"import socket; socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(/home/dimitris/.local/share/anaconda/run/anaconda-2/anaconda.sock)",
+			"socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect('/home/dimitris/.local/share/anaconda/run/anaconda-2/anaconda.sock')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/dimitris/github/computational_finance/fin_TP_9"
+	],
+	"file_history":
+	[
+		"/home/dimitris/github/computational_finance/fin_TP_9/ex.sublime-project",
+		"/home/dimitris/github/computational_finance/fin_TP_9/ex.sunlime-project",
+		"/ex.sublime-project",
+		"/home/dimitris/Desktop/tp8.py",
+		"/home/dimitris/Desktop/links_21_4",
+		"/home/dimitris/Desktop/links_19_4_2019.txt",
+		"/home/dimitris/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/dimitris/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/dimitris/ipython-in-depth/binder/Index.ipynb",
+		"/home/dimitris/crafty_cloned/crafty/package.json",
+		"/home/dimitris/Downloads/gp.py",
+		"/home/dimitris/crafty_cloned/crafty/greenkeeper.json",
+		"/home/dimitris/work/craftyExperiment/node_modules/@swissquote/eslint-plugin-swissquote/index.js",
+		"/home/dimitris/work/craftyExperiment/node_modules/@swissquote/eslint-plugin-swissquote/README.md",
+		"/home/dimitris/work/craftyExperiment/js/app.js",
+		"/home/dimitris/work/craftyExperiment/package.json",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/mapping.tex",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/problem.tex",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/OSA-journal-template.log",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/settings.tex",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/problem.log",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/vis.html",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/osajnl.cls",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/ga_section.tex",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/README.md",
+		"/home/dimitris/n.js",
+		"/home/dimitris/down.js",
+		"/home/dimitris/down.sh",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/legacy-styles/ao.sty",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/TP6/3dplot.py",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/d3.html",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/threeJS.html",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/js/three.js",
+		"/home/dimitris/TODO.txt",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/TP6/main.py",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/TP6/Individual.py",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/report.tex",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/[some directory here]/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/7018.903.0.0_0/material_css_min.css",
+		"/home/dimitris/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/dimitris/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/histo.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/matplotlibcpp.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/exmath.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/main_matrix.cpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/img_loader.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/nn.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/rsolution.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/rsolution.cpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/stepper.cpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/compile.sh",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/eigen3/Eigen/Dense",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/TP5/X.data",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/TP5/TP5_2016_2017.pdf",
+		"/home/dimitris/Desktop/Sxolh/TPs-Web-semantic/SemesterWork1/webpack_chrome_extension_reload",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/TP3/InputFileParser.py",
+		"/home/dimitris/Desktop/UniGE/find.js",
+		"/home/dimitris/Desktop/UniGE/find,js",
+		"/home/dimitris/CREST/segmentation.py",
+		"/home/dimitris/CREST/data/colorClassification.py",
+		"/home/dimitris/CREST/deepplantphenomics/deepplantphenomics/test_data/test_Ara2013_Canon/ara2013_plant001_rgb.png",
+		"/home/dimitris/CREST/deepplantphenomics/deepplantphenomics/__init__.py",
+		"/home/dimitris/CREST/deepplantphenomics/build/lib/deepplantphenomics/__init__.py",
+		"/home/dimitris/CREST/lib/python3.6/site-packages/deepplantphenomics/__init__.py"
+	],
+	"find":
+	{
+		"height": 201.0
+	},
+	"find_in_files":
+	{
+		"height": 178.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\n\n\n\n",
+			"\n\n\n",
+			"\n\n",
+			"\n",
+			"*",
+			"Black_Scholes_Algo",
+			"rt"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "ex.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
+							]
+						],
+						"settings":
+						{
+							"SL.33.region_keys":
+							[
+							],
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "algo.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31,
+								31
+							]
+						],
+						"settings":
+						{
+							"SL.41.region_keys":
+							[
+							],
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"show_definitions": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2300,
+								2300
+							]
+						],
+						"settings":
+						{
+							"SL.40.region_keys":
+							[
+							],
+							"default_dir": "/home/dimitris/github/computational_finance/fin_TP_9",
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 339.0,
+						"translation.y": 1711.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								123,
+								123
+							]
+						],
+						"settings":
+						{
+							"auto_name": "import numpy as np",
+							"default_dir": "/home/dimitris/github/computational_finance/fin_TP_9",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 45.0
+	},
+	"input":
+	{
+		"height": 52.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ex.sublime-project",
+	"replace":
+	{
+		"height": 86.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"algo",
+				"algo.py"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"Ind",
+				"TP6/Individual.py"
+			],
+			[
+				"Tor",
+				"TP6/Tournament.py"
+			],
+			[
+				"main",
+				"TP6/main.py"
+			],
+			[
+				"sett",
+				"report_latex/legacy-template-preparing/settings.tex"
+			],
+			[
+				"mapp",
+				"report_latex/legacy-template-preparing/mapping.tex"
+			],
+			[
+				"ga",
+				"report_latex/legacy-template-preparing/ga_section.tex"
+			],
+			[
+				"pro",
+				"report_latex/legacy-template-preparing/problem.tex"
+			],
+			[
+				"probl",
+				"report_latex/legacy-template-preparing/problem.tex"
+			],
+			[
+				"proble",
+				"report_latex/legacy-template-preparing/problem.tex"
+			],
+			[
+				"REA",
+				"README.md"
+			],
+			[
+				".tex",
+				"report_latex/legacy-template-preparing/OSA-journal-template.tex"
+			],
+			[
+				"osajnl",
+				"report_latex/legacy-template-preparing/osajnl.cls"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"vis",
+				"vis.html"
+			],
+			[
+				"d3.html",
+				"d3.html"
+			],
+			[
+				"r",
+				"README.md"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"n",
+				"~/n.js"
+			],
+			[
+				"ste",
+				"src/stepper.cpp"
+			],
+			[
+				"exmath",
+				"src/exmath.hpp"
+			],
+			[
+				"rso",
+				"src/rsolution.cpp"
+			],
+			[
+				"stepper",
+				"src/stepper.cpp"
+			],
+			[
+				"comp",
+				"compile.sh"
+			],
+			[
+				"nn hpp",
+				"src/nn.hpp"
+			],
+			[
+				"nn cp",
+				"nn.cpp"
+			],
+			[
+				"nn",
+				"nn.cpp"
+			],
+			[
+				"meta",
+				"meta.cpp"
+			],
+			[
+				"rs",
+				"rsolution.hpp"
+			],
+			[
+				"PSO",
+				"PSO.py"
+			],
+			[
+				"X",
+				"X.data"
+			],
+			[
+				"Inp",
+				"InputData.py"
+			],
+			[
+				"in",
+				"InputData.py"
+			],
+			[
+				"Par",
+				"Particle.py"
+			],
+			[
+				"RD",
+				"RdfSchema.txt"
+			],
+			[
+				"READ",
+				"README"
+			],
+			[
+				"ttl",
+				"NewResultsRDF.ttl"
+			],
+			[
+				"Read",
+				"README"
+			],
+			[
+				"py",
+				"parser.py"
+			],
+			[
+				"map",
+				"map.xml"
+			],
+			[
+				"schme",
+				"RdfSchema.txt"
+			],
+			[
+				"Rea",
+				"README"
+			],
+			[
+				"html",
+				"s1.html"
+			],
+			[
+				"s1",
+				"s1.html"
+			],
+			[
+				"",
+				"README"
+			],
+			[
+				"RE",
+				"README"
+			],
+			[
+				"sc",
+				"script1.js"
+			],
+			[
+				"Si",
+				"TP3/SimulatedAnnealing.py"
+			],
+			[
+				"SimulatedAnnealing",
+				"TP3/SimulatedAnnealing.py"
+			],
+			[
+				"InputF",
+				"TP3/InputFileParser.py"
+			],
+			[
+				"TSP",
+				"TP3/TSP.py"
+			],
+			[
+				"Simulate",
+				"mattias/UniGe/1. Semester/Metaheuristiques/TP4/SimulatedAnnealing.py"
+			],
+			[
+				"ma",
+				"main.py"
+			],
+			[
+				"/deepplantphenomics/__init__.py",
+				"lib/python3.6/site-packages/deepplantphenomics/__init__.py"
+			],
+			[
+				"phil",
+				"philo.ts"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 50.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
