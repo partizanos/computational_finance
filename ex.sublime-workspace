@@ -1,0 +1,591 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"reas",
+				"reasonable_aproximatation_volatility"
+			],
+			[
+				"poss",
+				"possible_strategies"
+			],
+			[
+				"cho",
+				"chosen_strategy"
+			],
+			[
+				"h",
+				"history"
+			],
+			[
+				"sim",
+				"simulations"
+			],
+			[
+				"pos",
+				"possible_history"
+			],
+			[
+				"a",
+				"append"
+			],
+			[
+				"s",
+				"strategies"
+			],
+			[
+				"stra",
+				"strategies"
+			],
+			[
+				"strate",
+				"strategies"
+			],
+			[
+				"read",
+				"readImage\tfunction"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 32.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Sideba",
+				"View: Toggle Side Bar"
+			],
+			[
+				"Upgrate",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"List",
+				"Package Control: List Packages"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"sublimeLinter",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"ipnb",
+				"Set Syntax: IPython Notebook"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"sideB",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"sett",
+				"Set Syntax: BibLaTeX"
+			],
+			[
+				"select All",
+				"Bookmarks: Select All"
+			],
+			[
+				"select",
+				"Bookmarks: Select All"
+			],
+			[
+				"j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"latexTools",
+				"LaTeXTools: Check system"
+			],
+			[
+				"latextools",
+				"LaTeXTools: Check system"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 568.0,
+		"history":
+		[
+			"import socket; socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect('/home/dimitris/.local/share/anaconda/run/anaconda-2/anaconda.sock')",
+			"import socket; socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(/home/dimitris/.local/share/anaconda/run/anaconda-2/anaconda.sock)",
+			"socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect('/home/dimitris/.local/share/anaconda/run/anaconda-2/anaconda.sock')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/dimitris/Desktop/tp8.py",
+		"/home/dimitris/Desktop/links_21_4",
+		"/home/dimitris/Desktop/links_19_4_2019.txt",
+		"/home/dimitris/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/dimitris/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/dimitris/ipython-in-depth/binder/Index.ipynb",
+		"/home/dimitris/crafty_cloned/crafty/package.json",
+		"/home/dimitris/Downloads/gp.py",
+		"/home/dimitris/crafty_cloned/crafty/greenkeeper.json",
+		"/home/dimitris/work/craftyExperiment/node_modules/@swissquote/eslint-plugin-swissquote/index.js",
+		"/home/dimitris/work/craftyExperiment/node_modules/@swissquote/eslint-plugin-swissquote/README.md",
+		"/home/dimitris/work/craftyExperiment/js/app.js",
+		"/home/dimitris/work/craftyExperiment/package.json",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/mapping.tex",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/problem.tex",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/OSA-journal-template.log",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/settings.tex",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/problem.log",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/vis.html",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/osajnl.cls",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/ga_section.tex",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/README.md",
+		"/home/dimitris/n.js",
+		"/home/dimitris/down.js",
+		"/home/dimitris/down.sh",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/legacy-template-preparing/legacy-styles/ao.sty",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/TP6/3dplot.py",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/d3.html",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/threeJS.html",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/js/three.js",
+		"/home/dimitris/TODO.txt",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/TP6/main.py",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/TP6/Individual.py",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/report_latex/report.tex",
+		"/home/dimitris/6_TP_meta_geneticque_algorithms/[some directory here]/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/7018.903.0.0_0/material_css_min.css",
+		"/home/dimitris/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/dimitris/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/histo.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/matplotlibcpp.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/exmath.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/main_matrix.cpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/img_loader.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/nn.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/rsolution.hpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/rsolution.cpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/stepper.cpp",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/compile.sh",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/Martino/Metaheuristic-eigen3/copyTp5/src/eigen3/Eigen/Dense",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/TP5/X.data",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/TP5/TP5_2016_2017.pdf",
+		"/home/dimitris/Desktop/Sxolh/TPs-Web-semantic/SemesterWork1/webpack_chrome_extension_reload",
+		"/home/dimitris/Desktop/UniGE/mattias/UniGe/1. Semester/Metaheuristiques/TP3/InputFileParser.py",
+		"/home/dimitris/Desktop/UniGE/find.js",
+		"/home/dimitris/Desktop/UniGE/find,js",
+		"/home/dimitris/CREST/segmentation.py",
+		"/home/dimitris/CREST/data/colorClassification.py",
+		"/home/dimitris/CREST/deepplantphenomics/deepplantphenomics/test_data/test_Ara2013_Canon/ara2013_plant001_rgb.png",
+		"/home/dimitris/CREST/deepplantphenomics/deepplantphenomics/__init__.py",
+		"/home/dimitris/CREST/deepplantphenomics/build/lib/deepplantphenomics/__init__.py",
+		"/home/dimitris/CREST/lib/python3.6/site-packages/deepplantphenomics/__init__.py"
+	],
+	"find":
+	{
+		"height": 55.0
+	},
+	"find_in_files":
+	{
+		"height": 178.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 43.0
+	},
+	"input":
+	{
+		"height": 52.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ex.sublime-project",
+	"replace":
+	{
+		"height": 82.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"Ind",
+				"TP6/Individual.py"
+			],
+			[
+				"Tor",
+				"TP6/Tournament.py"
+			],
+			[
+				"main",
+				"TP6/main.py"
+			],
+			[
+				"sett",
+				"report_latex/legacy-template-preparing/settings.tex"
+			],
+			[
+				"mapp",
+				"report_latex/legacy-template-preparing/mapping.tex"
+			],
+			[
+				"ga",
+				"report_latex/legacy-template-preparing/ga_section.tex"
+			],
+			[
+				"pro",
+				"report_latex/legacy-template-preparing/problem.tex"
+			],
+			[
+				"probl",
+				"report_latex/legacy-template-preparing/problem.tex"
+			],
+			[
+				"proble",
+				"report_latex/legacy-template-preparing/problem.tex"
+			],
+			[
+				"REA",
+				"README.md"
+			],
+			[
+				".tex",
+				"report_latex/legacy-template-preparing/OSA-journal-template.tex"
+			],
+			[
+				"osajnl",
+				"report_latex/legacy-template-preparing/osajnl.cls"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"vis",
+				"vis.html"
+			],
+			[
+				"d3.html",
+				"d3.html"
+			],
+			[
+				"r",
+				"README.md"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"n",
+				"~/n.js"
+			],
+			[
+				"ste",
+				"src/stepper.cpp"
+			],
+			[
+				"exmath",
+				"src/exmath.hpp"
+			],
+			[
+				"rso",
+				"src/rsolution.cpp"
+			],
+			[
+				"stepper",
+				"src/stepper.cpp"
+			],
+			[
+				"comp",
+				"compile.sh"
+			],
+			[
+				"nn hpp",
+				"src/nn.hpp"
+			],
+			[
+				"nn cp",
+				"nn.cpp"
+			],
+			[
+				"nn",
+				"nn.cpp"
+			],
+			[
+				"meta",
+				"meta.cpp"
+			],
+			[
+				"rs",
+				"rsolution.hpp"
+			],
+			[
+				"PSO",
+				"PSO.py"
+			],
+			[
+				"X",
+				"X.data"
+			],
+			[
+				"Inp",
+				"InputData.py"
+			],
+			[
+				"in",
+				"InputData.py"
+			],
+			[
+				"Par",
+				"Particle.py"
+			],
+			[
+				"RD",
+				"RdfSchema.txt"
+			],
+			[
+				"READ",
+				"README"
+			],
+			[
+				"ttl",
+				"NewResultsRDF.ttl"
+			],
+			[
+				"Read",
+				"README"
+			],
+			[
+				"py",
+				"parser.py"
+			],
+			[
+				"map",
+				"map.xml"
+			],
+			[
+				"schme",
+				"RdfSchema.txt"
+			],
+			[
+				"Rea",
+				"README"
+			],
+			[
+				"html",
+				"s1.html"
+			],
+			[
+				"s1",
+				"s1.html"
+			],
+			[
+				"",
+				"README"
+			],
+			[
+				"RE",
+				"README"
+			],
+			[
+				"sc",
+				"script1.js"
+			],
+			[
+				"Si",
+				"TP3/SimulatedAnnealing.py"
+			],
+			[
+				"SimulatedAnnealing",
+				"TP3/SimulatedAnnealing.py"
+			],
+			[
+				"InputF",
+				"TP3/InputFileParser.py"
+			],
+			[
+				"TSP",
+				"TP3/TSP.py"
+			],
+			[
+				"Simulate",
+				"mattias/UniGe/1. Semester/Metaheuristiques/TP4/SimulatedAnnealing.py"
+			],
+			[
+				"ma",
+				"main.py"
+			],
+			[
+				"/deepplantphenomics/__init__.py",
+				"lib/python3.6/site-packages/deepplantphenomics/__init__.py"
+			],
+			[
+				"phil",
+				"philo.ts"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 290.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
